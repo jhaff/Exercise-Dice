@@ -12,26 +12,22 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
-   
-    override func viewDidLoad() {
-        diceImageView1.layer.masksToBounds = true
-        diceImageView1.layer.borderWidth = 10
-        diceImageView1.layer.borderColor = UIColor.black.cgColor
-        diceImageView1.layer.cornerRadius = diceImageView1.bounds.width / 6
-        
-        diceImageView2.layer.masksToBounds = true
-        diceImageView2.layer.borderWidth = 10
-        diceImageView2.layer.borderColor = UIColor.black.cgColor
-        diceImageView2.layer.cornerRadius = diceImageView1.bounds.width / 6
+    @IBOutlet weak var rollButton: UIButton!
     
-        diceImageView1.image = [ #imageLiteral(resourceName: "jumping_jacks_dice"), #imageLiteral(resourceName: "walking_lunges_dice"), #imageLiteral(resourceName: "crunches_dice"), #imageLiteral(resourceName: "push-ups_dice"), #imageLiteral(resourceName: "wildcard_dice"), #imageLiteral(resourceName: "squats_dice") ].randomElement()
-        diceImageView2.image = [ #imageLiteral(resourceName: "10_reps_dice"), #imageLiteral(resourceName: "20_reps_dice"), #imageLiteral(resourceName: "30_reps_dice"), #imageLiteral(resourceName: "30_sec_dice"), #imageLiteral(resourceName: "60_sec_dice"), #imageLiteral(resourceName: "90_sec_dice") ].randomElement()
+    override func viewDidLoad() {
+        rollButton.layer.masksToBounds = true
+        rollButton.layer.borderWidth = 2
+        rollButton.layer.borderColor = UIColor.black.cgColor
+        rollButton.layer.cornerRadius = rollButton.bounds.width / 6
+    
+        diceImageView1.image = [ #imageLiteral(resourceName: "4"), #imageLiteral(resourceName: "6"), #imageLiteral(resourceName: "3"), #imageLiteral(resourceName: "1"), #imageLiteral(resourceName: "5"), #imageLiteral(resourceName: "2") ].randomElement()
+        diceImageView2.image = [ #imageLiteral(resourceName: "10_rep_dice"), #imageLiteral(resourceName: "20_rep_dice"), #imageLiteral(resourceName: "30_rep_dice"), #imageLiteral(resourceName: "30_sec_dice"), #imageLiteral(resourceName: "60_sec_dice"), #imageLiteral(resourceName: "90_sec_dice") ].randomElement()
     }
 
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-        diceImageView1.image = [ #imageLiteral(resourceName: "jumping_jacks_dice"), #imageLiteral(resourceName: "walking_lunges_dice"), #imageLiteral(resourceName: "crunches_dice"), #imageLiteral(resourceName: "push-ups_dice"), #imageLiteral(resourceName: "wildcard_dice"), #imageLiteral(resourceName: "squats_dice") ].randomElement()
-        diceImageView2.image = [ #imageLiteral(resourceName: "10_reps_dice"), #imageLiteral(resourceName: "20_reps_dice"), #imageLiteral(resourceName: "30_reps_dice"), #imageLiteral(resourceName: "30_sec_dice"), #imageLiteral(resourceName: "60_sec_dice"), #imageLiteral(resourceName: "90_sec_dice") ].randomElement()
+        diceImageView1.image = [ #imageLiteral(resourceName: "4"), #imageLiteral(resourceName: "6"), #imageLiteral(resourceName: "3"), #imageLiteral(resourceName: "1"), #imageLiteral(resourceName: "5"), #imageLiteral(resourceName: "2") ].randomElement()
+        diceImageView2.image = [ #imageLiteral(resourceName: "10_rep_dice"), #imageLiteral(resourceName: "20_rep_dice"), #imageLiteral(resourceName: "30_rep_dice"), #imageLiteral(resourceName: "30_sec_dice"), #imageLiteral(resourceName: "60_sec_dice"), #imageLiteral(resourceName: "90_sec_dice") ].randomElement()
     }
 
 }
